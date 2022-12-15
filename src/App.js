@@ -1,8 +1,8 @@
+import Editor from './components/editor/editor';
+
 function App() {
     return (
-        <div className="App">
-            <h1>Проект настроен</h1>
-        </div>
+        <Editor />
     );
 }
 
