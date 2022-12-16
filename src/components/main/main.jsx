@@ -1,11 +1,11 @@
+import Header from '../header/header';
 import Editor from '../editor/editor';
-import Navigation from '../navigation/navigation';
 import './main.scss';
 
-const Main = () => {
+const Main = ({ page }) => {
     return (
         <div className='main'>
-            <Navigation />
+            <Header page={page} />
             <Editor />
         </div>
     );

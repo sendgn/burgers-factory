@@ -10,12 +10,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-    text-decoration: none;
-    color: #252C32;
-}
-
 .container {
     max-width: $screen-device-lg;
     margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    color: #252C32;
+
+    &_selected {
+        font-weight: bold;
+    }
 }

@@ -1,13 +1,13 @@
 import Sidebar from '../../components/sidebar/sidebar';
 import Main from '../../components/main/main';
 
-const Recipes = () => {
+const Combo = () => {
     return (
         <div className='flex'>
             <Sidebar />
-            <Main page='recipes' />
+            <Main page='combo' />
         </div>
     );
 }
 
-export default Recipes;
+export default Combo;
