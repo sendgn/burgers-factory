@@ -6,9 +6,11 @@ const Header = ({ page }) => {
     return (
         <div className='header'>
             <Navigation selected={page} />
-            <Breadcrumbs />
-            <div className='header__title'>
-                Название бургера
+            <div className='header__route'>
+                <Breadcrumbs className='header__breadcrumbs' />
+                <div className='header__title'>
+                    Классический
+                </div>
             </div>
         </div>
     );

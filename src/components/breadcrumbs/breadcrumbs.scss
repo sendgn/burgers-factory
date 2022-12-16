@@ -1,3 +1,15 @@
 .breadcrumbs {
     font-size: $font-size-sm;
+    display: flex;
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: $color-mid-gray;
+        
+        &:last-of-type {
+            color: $color-dark;
+        }
+    }
 }

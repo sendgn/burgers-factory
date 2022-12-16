@@ -1,5 +1,6 @@
 import './sidebar.scss'
-import burger from '../../assets/img/burger.png';
+import shrinkLeftIcon from '../../assets/img/shrink-left.png'
+import burgerLogo from '../../assets/img/burger.png';
 import Tree from '../tree/tree';
 
 const tree = [
@@ -37,11 +38,12 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='sidebar__header'>
-                <img src={burger} alt='Логотип фабрика бургеров' />
-                <span className='sidebar__title'>Добро пожаловать в "Фабрику бургеров"</span>
+                <img src={burgerLogo} alt='Логотип фабрика бургеров' />
+                <span className='sidebar__title'>Добро пожаловать в “Фабрику бургеров”</span>
             </div>
             <div className='sidebar__separator' />
             <Tree className='sidebar__tree' items={tree} />
+            <img className='sidebar__toggle' src={shrinkLeftIcon} alt='Свернуть боковое меню' />
         </div>
     );
 }

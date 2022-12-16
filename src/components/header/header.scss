@@ -1,3 +1,14 @@
 .header {
+    &__route {
+        margin: 16px 0;
+        padding: 0 20px;
+    }
 
+    &__breadcrumbs {
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        font-size: $font-size-xl;
+    }
 }

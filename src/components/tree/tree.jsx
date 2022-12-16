@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import './tree.scss';
-import chevronDark from '../../assets/img/chevron-dark.png';
-import chevronLight from '../../assets/img/chevron-light.png';
+import chevronDownDarkIcon from '../../assets/img/chevron-down-dark.png';
+import chevronDownLightIcon from '../../assets/img/chevron-down-light.png';
 
 const Tree = ({ className, items }) => {
     return (
@@ -11,7 +11,11 @@ const Tree = ({ className, items }) => {
                     <div className='tree__item' key={name}>
                         <div className='tree__item-title'>
                             <img
-                                src={isComplex ? chevronDark : chevronLight}
+                                src={
+                                    isComplex ?
+                                        chevronDownDarkIcon :
+                                        chevronDownLightIcon
+                                }
                                 alt='Категория рецептов'
                             />
                             <span>{title}</span>
