@@ -1,0 +1,23 @@
+.tree {
+    color: $color-dark;
+
+    &__item-title {
+        font-weight: $font-weight-semi;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 12px 4px 4px;
+        cursor: default;
+    }
+
+    &__item-element {
+        padding: 4px 12px 4px 44px;
+        border-radius: $border-radius-md;
+        cursor: pointer;
+
+        &_selected,
+        &:hover {
+            background: #EEF0F2;
+        }
+    }
+}

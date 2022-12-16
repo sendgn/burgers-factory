@@ -6,6 +6,7 @@
 
 body {
     font-family: $font-family;
+    font-size: $font-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +18,7 @@ body {
 
 .link {
     text-decoration: none;
-    color: #252C32;
+    color: $color-dark;
 
     &_selected {
         font-weight: bold;
