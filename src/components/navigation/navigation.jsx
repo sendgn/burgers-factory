@@ -26,10 +26,9 @@ const Navigation = ({ page }) => {
             {links.map((link => {
                 return (
                     <Link 
-                        className={
-                            cn('navigation__link link',
-                            { link_selected: page.includes(link.to) })
-                        }
+                        className={cn('navigation__item link', {
+                            navigation__item_selected: page.includes(link.to)
+                        })}
                         to={link.to} 
                         key={link.name}
                     >
