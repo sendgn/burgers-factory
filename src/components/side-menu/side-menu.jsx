@@ -1,15 +1,22 @@
 import cn from 'classnames';
-import './tree.scss';
+import './side-menu.scss';
 import chevronDownDarkIcon from '../../assets/img/chevron-down-dark.png';
 import chevronDownLightIcon from '../../assets/img/chevron-down-light.png';
+import { useState } from 'react';
 
-const Tree = ({ className, items }) => {
+const SideMenu = ({ className, menu }) => {
+    const [ activeMenuItem, setActiveMenuItem ] = useState();
+
+    const handleMenuItemClick = () => {
+        // setActiveMenuItem();
+    }
+
     return (
-        <div className={cn('tree', className)}>
-            {items.map(({ isComplex, title, elements, name }) => {
+        <div className={cn('side-menu', className)}>
+            {menu.map(({ isComplex, title, elements, name }) => {
                 return (
-                    <div className='tree__item' key={name}>
-                        <div className='tree__item-title'>
+                    <div className='side-menu__item' key={name}>
+                        <div className='side-menu__item-title'>
                             <img
                                 src={
                                     isComplex ?
@@ -21,10 +28,14 @@ const Tree = ({ className, items }) => {
                             <span>{title}</span>
                         </div>
                         {elements.length !== 0 &&
-                            <div className='tree__item-content'>
+                            <div className='side-menu__item-content'>
                                 {elements.map((element) => {
                                     return (
-                                        <div className='tree__item-element'>
+                                        <div
+                                            className='side-menu__item-element'
+                                            key={element}
+                                            onClick={(element) => handleMenuItemClick(element)}
+                                        >
                                             {element}
                                         </div>
                                     );
@@ -38,4 +49,4 @@ const Tree = ({ className, items }) => {
     );
 }
 
-export default Tree;
+export default SideMenu;

@@ -13,7 +13,7 @@ const Breadcrumbs = ({ className }) => {
         <div className={cn('breadcrumbs', className)}>
             {items.map((item, index) => {
                 return (
-                    <div className='breadcrumbs__item'>
+                    <div className='breadcrumbs__item' key={item}>
                         <span>{item}</span>
                         {index !== items.length - 1 && <img src={chevronRight} alt='Стрелка вправо' /> }
                     </div>
