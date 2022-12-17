@@ -2,13 +2,7 @@ import cn from 'classnames';
 import './breadcrumbs.scss';
 import chevronRight from '../../assets/img/chevron-right.png';
 
-const Breadcrumbs = ({ className }) => {
-    const items = [
-        'Рецепты',
-        'Бургеры',
-        'Классический',
-    ];
-
+const Breadcrumbs = ({ className, items }) => {
     return (
         <div className={cn('breadcrumbs', className)}>
             {items.map((item, index) => {

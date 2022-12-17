@@ -1,0 +1,54 @@
+[
+    {
+        "name": "sandwiches",
+        "title": "Сэндвичи",
+        "items": [],
+        "isComplex": true
+    },
+    {
+        "name": "burgers",
+        "title": "Бургеры",
+        "items": [
+            {
+                "name": "classic",
+                "title": "Классический"
+            },
+            {
+                "name": "cheeseburger",
+                "title": "Чизбургер"
+            },
+            {
+                "name": "bigMac",
+                "title": "Биг Мак"
+            },
+            {
+                "name": "bigTasty",
+                "title": "Биг Тейсти"
+            }
+        ],
+        "isComplex": true
+    },
+    {
+        "name": "baguette",
+        "title": "Багет",
+        "items": [
+            {
+                "name": "withHam",
+                "title": "С ветчиной"
+            },
+            {
+                "name": "withPastrami",
+                "title": "С пастрами"
+            },
+            {
+                "name": "withGarlic",
+                "title": "Чесночный"
+            },
+            {
+                "name": "withGrilledPepper",
+                "title": "С перцем-гриль"
+            }
+        ],
+        "isComplex": false
+    }
+]

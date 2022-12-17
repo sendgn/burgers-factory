@@ -5,22 +5,22 @@ import './navigation.scss';
 const links = [
     {
         name: 'recipes',
-        text: 'Рецепты',
-        to: '/'
+        title: 'Рецепты',
+        to: '/recipes'
     },
     {
         name: 'prices',
-        text: 'Прайс-лист',
+        title: 'Прайс-лист',
         to: '/prices'
     },
     {
         name: 'combo',
-        text: 'Комбо-наборы',
+        title: 'Комбо-наборы',
         to: '/combo'
     },
 ]
 
-const Navigation = ({ selected }) => {
+const Navigation = ({ page }) => {
     return (
         <div className='navigation'>
             {links.map((link => {
@@ -28,12 +28,12 @@ const Navigation = ({ selected }) => {
                     <Link 
                         className={
                             cn('navigation__link link',
-                            { link_selected: link.name === selected })
+                            { link_selected: page.includes(link.to) })
                         }
                         to={link.to} 
                         key={link.name}
                     >
-                        {link.text}
+                        {link.title}
                     </Link>
                 );
             }))}
