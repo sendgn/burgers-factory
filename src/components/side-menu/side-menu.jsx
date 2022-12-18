@@ -7,15 +7,23 @@ import chevronDownLightIcon from '../../assets/img/chevron-down-light.png';
 import recipes from '../../data/recipes.json';
 
 const SideMenu = ({ className, page }) => {
-    let menu;
-    if (page === '/recipes') {
+    let menu = [];
+    if (page.includes('recipes')) {
         menu = recipes;
     }
 
-    const [ activeMenuItem, setActiveMenuItem ] = useState();
+    const getFirstMenuItemName = (menu) => {
+        for (let { items } of menu) {
+            for (let { name } of items) {
+                return name;
+            }
+        }
+    };
 
-    const handleMenuItemClick = () => {
-        // setActiveMenuItem();
+    const [ activeMenuItem, setActiveMenuItem ] = useState(getFirstMenuItemName(menu));
+
+    const handleMenuItemClick = (name) => {
+        setActiveMenuItem(name);
     }
 
     return (
@@ -40,9 +48,9 @@ const SideMenu = ({ className, page }) => {
                                     {items.map(({ name, title }) => {
                                         return (
                                             <div
-                                                className='side-menu__item-element'
+                                                className={cn('side-menu__item-element', { 'side-menu__item-element_selected' : activeMenuItem === name })}
                                                 key={name}
-                                                onClick={(name) => handleMenuItemClick(name)}
+                                                onClick={() => handleMenuItemClick(name)}
                                             >
                                                 {title}
                                             </div>
