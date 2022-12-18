@@ -1,6 +1,8 @@
+import './combo.scss';
+
 const Combo = () => {
     return (
-        <h2>Комбо-наборы</h2>
+        <div className='combo'>Coming soon... 🍔</div>
     );
 }
 

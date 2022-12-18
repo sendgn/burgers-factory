@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
 import './side-menu.scss';
+import recipes from '../../data/recipes.json';
 import chevronDownDarkIcon from '../../assets/img/chevron-down-dark.png';
 import chevronDownLightIcon from '../../assets/img/chevron-down-light.png';
-import recipes from '../../data/recipes.json';
 
 const SideMenu = ({ className, page }) => {
     let menu = [];
@@ -20,8 +20,13 @@ const SideMenu = ({ className, page }) => {
         }
     };
 
-    const [ activeMenuItem, setActiveMenuItem ] =
-        useState(getFirstMenuItemName(menu));
+    const firstMenuItem = getFirstMenuItemName(menu);
+    const [ activeMenuItem, setActiveMenuItem ] = useState(firstMenuItem);
+    
+    // Update active item when route is changed
+    useEffect(() => {
+        setActiveMenuItem(firstMenuItem);
+    }, [firstMenuItem]);
 
     const handleMenuItemClick = (name) => {
         setActiveMenuItem(name);

@@ -20,7 +20,10 @@ const Recipes = () => {
     return (
         <div className='recipes'>
             <div className='recipes__header'>
-                <Breadcrumbs className='recipes__breadcrumbs' items={breadcrumbsItems} />
+                <Breadcrumbs
+                    className='recipes__breadcrumbs'
+                    items={breadcrumbsItems}
+                />
                 <div className='recipes__title'>
                     Классический
                 </div>

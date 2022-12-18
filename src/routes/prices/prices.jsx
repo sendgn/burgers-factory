@@ -1,6 +1,8 @@
+import './prices.scss'
+
 const Prices = () => {
     return (
-        <h2>Прайс-лист</h2>
+        <div className='prices'>Coming soon... 🍔</div>
     );
 }
 
