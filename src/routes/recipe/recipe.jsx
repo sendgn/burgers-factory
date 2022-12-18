@@ -1,6 +1,10 @@
+import ContentMenu from '../../components/content-menu/content-menu';
+
 const Recipe = () => {
     return (
-        123
+        <div className='recipe'>
+            <ContentMenu />
+        </div>
     );
 }
 

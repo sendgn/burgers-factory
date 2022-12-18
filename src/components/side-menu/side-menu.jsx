@@ -20,7 +20,8 @@ const SideMenu = ({ className, page }) => {
         }
     };
 
-    const [ activeMenuItem, setActiveMenuItem ] = useState(getFirstMenuItemName(menu));
+    const [ activeMenuItem, setActiveMenuItem ] =
+        useState(getFirstMenuItemName(menu));
 
     const handleMenuItemClick = (name) => {
         setActiveMenuItem(name);
@@ -48,7 +49,11 @@ const SideMenu = ({ className, page }) => {
                                     {items.map(({ name, title }) => {
                                         return (
                                             <div
-                                                className={cn('side-menu__item-element', { 'side-menu__item-element_selected' : activeMenuItem === name })}
+                                                className={cn(
+                                                    'side-menu__item-element', {
+                                                    'side-menu__item-element_selected':
+                                                        activeMenuItem === name
+                                                    })}
                                                 key={name}
                                                 onClick={() => handleMenuItemClick(name)}
                                             >

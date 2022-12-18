@@ -1,0 +1,13 @@
+.content-menu {
+    display: flex;
+    gap: 48px;
+    height: 36px;
+    padding: 10px 20px;
+    background: $color-main;
+    border-radius: $border-radius;
+
+    &__link {
+        color: $color-white;
+        font-size: 13px;
+    }
+}
